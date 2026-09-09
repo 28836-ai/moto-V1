@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MotoInfo Thailand | ข้อมูลจักรยานยนต์</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,"Noto Sans Thai",sans-serif;background:#f4f5f7;color:#171717;line-height:1.7}
+header{background:#111;color:#fff;position:sticky;top:0;z-index:10}
+nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800;color:#ff5a1f}.menu a{color:#fff;text-decoration:none;margin-left:22px}
+.hero{background:linear-gradient(120deg,#151515,#3b1c12);color:#fff;padding:90px 20px}
+.hero-inner{max-width:1100px;margin:auto}.hero h1{font-size:48px;line-height:1.15;max-width:700px}.hero p{margin:18px 0 28px;color:#ddd;max-width:650px}
+.btn{display:inline-block;background:#ff5a1f;color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:bold}
+section{max-width:1100px;margin:auto;padding:60px 20px}
+h2{font-size:32px;margin-bottom:25px}.muted{color:#666;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 5px 20px #0000000d}
+.card h3{margin:10px 0}.icon{font-size:40px}
+.specs{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+.specs th,.specs td{text-align:left;padding:14px;border-bottom:1px solid #eee}.specs th{background:#eee}
+.search{display:flex;gap:10px;margin-bottom:25px}.search input{flex:1;padding:13px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+.model{border-left:5px solid #ff5a1f}
+footer{background:#111;color:#bbb;text-align:center;padding:30px}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.hero h1{font-size:36px}.menu a{margin-left:8px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">MotoInfo</div>
+<div class="menu">
+<a href="#home">หน้าแรก</a><a href="#models">รุ่นยอดนิยม</a><a href="#guide">ความรู้</a><a href="#compare">เปรียบเทียบ</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<h1>ศูนย์รวมข้อมูล<br>จักรยานยนต์</h1>
+<p>ค้นหาข้อมูลรถจักรยานยนต์ รุ่นยอดนิยม สเปก เครื่องยนต์ ราคาโดยประมาณ และคำแนะนำสำหรับคนรักมอเตอร์ไซค์</p>
+<a class="btn" href="#models">ดูรุ่นยอดนิยม</a>
+</div>
+</section>
+
+<section id="models">
+<h2>รุ่นยอดนิยม</h2>
+<p class="muted">ตัวอย่างข้อมูลสำหรับนำไปต่อยอดเป็นฐานข้อมูลรถจริง</p>
+<div class="search"><input id="search" placeholder="ค้นหารุ่น เช่น Honda, Yamaha, Scooter..."></div>
+<div class="grid" id="cards">
+<article class="card model" data-name="honda pcx 160 scooter">
+<div class="icon">🏍️</div><h3>Honda PCX 160</h3>
+<p>รถออโตเมติกสำหรับใช้งานในเมือง เน้นความสะดวกและความประหยัด</p>
+<p><b>เครื่องยนต์:</b> 157 cc</p>
+</article>
+<article class="card model" data-name="yamaha nmax 155 scooter">
+<div class="icon">🏍️</div><h3>Yamaha NMAX 155</h3>
+<p>สกู๊ตเตอร์สไตล์สปอร์ต เหมาะกับการเดินทางประจำวัน</p>
+<p><b>เครื่องยนต์:</b> 155 cc</p>
+</article>
+<article class="card model" data-name="kawasaki ninja 400 sport">
+<div class="icon">🏍️</div><h3>Kawasaki Ninja 400</h3>
+<p>รถสปอร์ตขนาดกลางสำหรับผู้ที่ต้องการสมรรถนะและดีไซน์สปอร์ต</p>
+<p><b>เครื่องยนต์:</b> 399 cc</p>
+</article>
+</div>
+</section>
+
+<section id="compare">
+<h2>ตัวอย่างตารางข้อมูล</h2>
+<table class="specs">
+<tr><th>รุ่น</th><th>ประเภท</th><th>เครื่องยนต์</th><th>เหมาะกับ</th></tr>
+<tr><td>Honda PCX 160</td><td>Scooter</td><td>157 cc</td><td>ใช้งานในเมือง</td></tr>
+<tr><td>Yamaha NMAX 155</td><td>Scooter</td><td>155 cc</td><td>เดินทางประจำวัน</td></tr>
+<tr><td>Kawasaki Ninja 400</td><td>Sport</td><td>399 cc</td><td>ผู้ชอบรถสปอร์ต</td></tr>
+</table>
+</section>
+
+<section id="guide">
+<h2>ความรู้เกี่ยวกับจักรยานยนต์</h2>
+<div class="grid">
+<div class="card"><div class="icon">🔧</div><h3>การบำรุงรักษา</h3><p>ตรวจเช็กน้ำมันเครื่อง เบรก ยาง โซ่ และระบบไฟอย่างสม่ำเสมอ</p></div>
+<div class="card"><div class="icon">🪖</div><h3>ความปลอดภัย</h3><p>สวมหมวกนิรภัยที่ได้มาตรฐาน ตรวจสภาพรถ และขับขี่ตามกฎหมาย</p></div>
+<div class="card"><div class="icon">📊</div><h3>เลือกซื้อรถ</h3><p>เปรียบเทียบประเภท เครื่องยนต์ ค่าใช้จ่าย และลักษณะการใช้งานก่อนตัดสินใจ</p></div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 MotoInfo Thailand — เว็บไซต์ตัวอย่างข้อมูลจักรยานยนต์</footer>
+
+<script>
+const input=document.getElementById('search');
+const cards=[...document.querySelectorAll('.model')];
+input.addEventListener('input',()=>{
+ const q=input.value.toLowerCase();
+ cards.forEach(c=>c.style.display=c.dataset.name.includes(q)?'block':'none');
+});
+</script>
+</body>
+</html>
